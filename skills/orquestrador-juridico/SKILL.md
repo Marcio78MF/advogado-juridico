@@ -54,6 +54,7 @@ Consultar `references/mapa-habilidades.md` para a tabela completa de roteamento.
 | petição / peça / esqueleto / estrutura / contestação | `resumo-pecas` |
 | revisar contrato / cláusula de risco / due diligence | `revisao-contratos` |
 | contrato social / LTDA / SA / MEI / EIRELI / constituição / alteração contratual | `gerador-minutas` → fluxo especial DREI |
+| financeiro / provisão / contingência / due diligence financeira / balanço / fluxo de caixa / valuation / break-even | `conselheiro-financeiro` |
 
 ---
 
@@ -194,6 +195,7 @@ Consultar `references/fluxo-drei.md` para:
 | 15 | `preparacao-audiencias` | Roteiro, perguntas e simulação de audiência |
 | 16 | `resumo-pecas` | Esqueleto argumentativo de peças processuais |
 | 17 | `revisao-contratos` | Análise de risco com score e recomendações |
+| 18 | `conselheiro-financeiro` | Análise financeira de litígios, due diligence e gestão financeira do escritório |
 
 ---
 

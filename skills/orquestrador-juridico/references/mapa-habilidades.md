@@ -246,6 +246,20 @@ Priorizar a demanda **mais específica** quando houver sobreposição.
 
 ---
 
+### 18. conselheiro-financeiro
+**Quando:** Análise financeira de litígios, due diligence econômica, provisão de contingência ou gestão financeira do escritório.
+
+| Frases típicas | Palavras-chave |
+|---|---|
+| "Quanto vai me custar esse processo no balanço?" | provisão, contingência, balanço |
+| "Faça due diligence financeira da empresa" | due diligence financeira, valuation |
+| "Análise de viabilidade econômica da ação" | viabilidade econômica, custo do processo |
+| "Saúde financeira do escritório" | gestão financeira, fluxo de caixa |
+| "Ponto de equilíbrio do escritório" | break-even, ponto de equilíbrio |
+| "Projeção de receita dos próximos meses" | projeção, receita, budget jurídico |
+
+---
+
 ## Cenários Multi-skill (sequenciamento)
 
 ### Novo cliente em área regulada
