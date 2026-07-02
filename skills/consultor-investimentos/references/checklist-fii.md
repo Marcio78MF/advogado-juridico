@@ -4,6 +4,14 @@ Rodar com **dados atuais verificados** (mínimo 2 fontes: Status Invest, Investi
 
 **Regra de decisão:** falha em **2 ou mais critérios → REPROVADO**. Falha em 1 → APROVADO COM RESSALVA (peso menor).
 
+## Critério 0 — Elegibilidade (eliminatório, verificar ANTES de tudo)
+
+**O ativo é acessível ao público geral?** Fundos destinados a **investidores qualificados** (R$ 1 mi+ em aplicações, regra CVM) têm a ordem rejeitada pela corretora para investidor comum — mesmo no mercado secundário.
+
+- Verificar o campo "público-alvo" na página do fundo (gestora, Status Invest, corretora).
+- Se restrito e o investidor não é qualificado → **descartar imediatamente** e usar o substituto do segmento.
+- *Lição de 02/07/2026: ordem de 12 KNIP11 rejeitada por essa regra — nenhuma das análises havia checado. KNSC11 assumiu a posição.*
+
 ## Os 7 critérios
 
 ### 1. P/VP (Preço / Valor Patrimonial)

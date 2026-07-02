@@ -31,9 +31,11 @@ Rever as bandas quando o patrimônio total passar de R$ 200 mil.
 |---|---|---|---|
 | BTLG11 | Logística | Núcleo | 25% |
 | XPML11 | Shopping | Núcleo | 21% |
-| KNIP11 | Papel IPCA+ | Núcleo | 22% |
+| KNSC11 | Papel IPCA+CDI | Núcleo | 22% |
 | KFOF11 | FOF | Satélite | 16% |
 | HGRE11 | Lajes | Satélite | 16% |
+
+> **Nota (02/07/2026):** KNIP11 era o titular do segmento papel, mas é **exclusivo para investidores qualificados** (ordem rejeitada pela corretora). KNSC11 assumiu a posição. Se o investidor atingir status de qualificado no futuro, reavaliar KNIP11 pela pureza IPCA+.
 
 **Substitutos aprovados por segmento** (usar se o titular falhar no checklist no dia da compra):
 
@@ -41,9 +43,11 @@ Rever as bandas quando o patrimônio total passar de R$ 200 mil.
 |---|---|
 | Logística | HGLG11, XPLG11, VILG11 |
 | Shopping | VISC11, HGBS11 |
-| Papel | MXRF11, CPTS11, KNSC11, MCCI11, KNCR11 |
+| Papel | MXRF11, CPTS11, MCCI11, KNCR11 |
 | FOF / Multi | KNHF11, HFOF11, RBRF11 |
 | Lajes | JSRE11 (apenas com desconto forte e vacância < 10%) |
+
+**Restrição operacional:** antes de qualquer ordem, verificar se o ativo é **exclusivo para investidor qualificado** (público-alvo na página do fundo/corretora). O investidor atualmente NÃO é qualificado (< R$ 1 mi em aplicações).
 
 ## Regras de aporte mensal
 
