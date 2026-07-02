@@ -1,0 +1,83 @@
+{
+  "investidor": "Márcio",
+  "perfil": "moderado com viés de crescimento",
+  "moeda": "BRL",
+  "atualizado_em": "2026-07-02",
+  "renda_mensal": { "min": 15000, "max": 20000 },
+  "capacidade_aporte_mensal": { "min": 3000, "max": 5000 },
+  "reserva_emergencia": {
+    "status": "INCOMPLETA",
+    "meta_meses_de_custo": 6,
+    "observacao": "Prioridade: migrar poupança para CDB liquidez diária 100%+ CDI antes de ampliar renda variável"
+  },
+  "posicoes_renda_fixa": [
+    { "descricao": "C6 Invest — Renda Fixa", "valor": 23727.41, "data_ref": "2026-06-30" },
+    { "descricao": "Poupança (migrar p/ CDB liquidez diária)", "valor": 40000.00, "data_ref": "2026-07-01" },
+    { "descricao": "Conta corrente (migrar p/ Tesouro Selic ou CDB)", "valor": 23000.00, "data_ref": "2026-07-01" }
+  ],
+  "posicoes_fii": [
+    {
+      "ticker": "BTLG11",
+      "segmento": "logistica",
+      "papel_na_carteira": "nucleo",
+      "cotas": 12,
+      "preco_medio": 102.34,
+      "pvp_entrada": 1.00,
+      "dy_entrada_12m": 0.0932,
+      "alvo_pct_fii": 0.25,
+      "data_compra": "2026-07-02",
+      "status_compra": "PLANEJADA — confirmar execução"
+    },
+    {
+      "ticker": "XPML11",
+      "segmento": "shopping",
+      "papel_na_carteira": "nucleo",
+      "cotas": 10,
+      "preco_medio": 104.47,
+      "pvp_entrada": 0.95,
+      "dy_entrada_12m": 0.1055,
+      "alvo_pct_fii": 0.21,
+      "data_compra": "2026-07-02",
+      "status_compra": "PLANEJADA — confirmar execução"
+    },
+    {
+      "ticker": "KNIP11",
+      "segmento": "papel_ipca",
+      "papel_na_carteira": "nucleo",
+      "cotas": 12,
+      "preco_medio": 92.50,
+      "pvp_entrada": 0.98,
+      "dy_entrada_12m": 0.1090,
+      "alvo_pct_fii": 0.22,
+      "data_compra": "2026-07-02",
+      "status_compra": "PLANEJADA — confirmar execução"
+    },
+    {
+      "ticker": "KFOF11",
+      "segmento": "fof",
+      "papel_na_carteira": "satelite",
+      "cotas": 10,
+      "preco_medio": 79.37,
+      "pvp_entrada": 0.86,
+      "dy_entrada_12m": 0.1111,
+      "alvo_pct_fii": 0.16,
+      "data_compra": "2026-07-02",
+      "status_compra": "PLANEJADA — confirmar execução"
+    },
+    {
+      "ticker": "HGRE11",
+      "segmento": "lajes",
+      "papel_na_carteira": "satelite",
+      "cotas": 6,
+      "preco_medio": 129.49,
+      "pvp_entrada": 0.88,
+      "dy_entrada_12m": 0.0968,
+      "alvo_pct_fii": 0.16,
+      "data_compra": "2026-07-02",
+      "status_compra": "PLANEJADA — confirmar execução",
+      "ressalva": "Distribuição de maio teve evento não-recorrente — só aumentar peso se vacância seguir controlada"
+    }
+  ],
+  "posicoes_acoes": [],
+  "dividendos_recebidos": []
+}
