@@ -20,6 +20,16 @@ falta ética.
 - Checklist obrigatório de dado sensível no template de PR.
 - Regra permanente e inegociável deste repositório (Security First).
 
+## Risco conhecido e aceito (registrado em 2026-07-03)
+
+Documentos estratégicos do MF-AOS que viveram neste repositório antes da
+separação (ADR-0004) **permanecem no histórico Git** — a remoção do HEAD
+não os apaga de commits antigos. O proprietário decidiu **não** reescrever
+o histórico por ora (ação irreversível). Mitigação vigente: nenhum dado
+novo de negócio ou memória operacional entra neste repositório daqui em
+diante; o conteúdo histórico não contém dado de cliente, apenas
+planejamento de produto.
+
 ## Como reportar uma vulnerabilidade ou exposição
 
 Se você identificar dado sensível commitado ou uma vulnerabilidade:
