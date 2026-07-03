@@ -1,12 +1,36 @@
 # RFC-0004: Memory Engine — desenho do esquema de dados (Onda 2)
 
-- **Status**: em discussão — **aguardando revisão do Dr. Márcio antes de
-  qualquer implementação**
+- **Status**: **aceita** em 2026-07-03 pelo Dr. Márcio → materializada em
+  ADR-0003 (arquitetura do `mf-memoria`) e ADR-0004 (separação de
+  repositórios)
 - **Data**: 2026-07-03
 - **Autor**: Claude Code
 - **Origem**: pedido direto do Dr. Márcio; achado B5 do red team (Memory
   Engine sem uma única decisão de design) e Future Review §1 da revisão
   constitucional
+
+## Decisões da revisão (Dr. Márcio, 2026-07-03)
+
+1. Arquitetura aprovada: local-first, SQLite cifrado fora do Git, acesso
+   via servidor MCP `mf-memoria`.
+2. **O MF-AOS vai para repositório privado separado** — não misturar a
+   base/plugin público de autoria de Misael Holanda com a memória
+   operacional do escritório (resolve os achados A2/B4 → ADR-0004).
+3. Uma máquina principal no v1; multi-dispositivo é fase futura.
+4. Vocabulário de `area` (12): cível, consumidor, bancário/consignados,
+   criminal, previdenciário, tributário, família/sucessões, empresarial,
+   ambiental, administrativo, trabalhista, trânsito.
+5. Validado o custo de 2–3 campos obrigatórios de desfecho ao encerrar
+   caso, peça ou tarefa relevante.
+6. Retenção inicial: 5 anos, revisão anual, anonimização e expurgo quando
+   aplicável.
+7. Implementação do `mf-memoria` autorizada como primeiro código real do
+   MF-AOS, condicionada a: nada de dado real no Git; mínimo necessário no
+   runtime; testes desde o início; migrations; cifragem; logs mínimos e
+   seguros; conflict-check obrigatório antes da abertura de caso; e o
+   princípio constitucional nº 11 (preparar melhor o decisor, nunca decidir
+   por ele). **Gate adicional**: plano técnico apresentado e aprovado antes
+   de codar — ver `docs/design/mf-memoria-v1.md`.
 
 ## Problema
 

@@ -19,6 +19,12 @@ versionamento conforme [SemVer](https://semver.org/lang/pt-BR/) — política em
   `UserPromptSubmit` (achado A4).
 
 ### Adicionado
+- RFC-0004 (Memory Engine) **aprovada** com as 7 decisões do Dr. Márcio;
+  ADR-0003 (`mf-memoria` local-first: SQLite cifrado + servidor MCP) e
+  ADR-0004 (separação plugin público × MF-AOS privado); plano técnico da
+  v1 em `docs/design/mf-memoria-v1.md` (aguardando aprovação para codar);
+  convenção Decision Replay adotada (RFC-0002 aceita, campo "Origem" no
+  template de ADR e regra `Ref:` em commits no `CONTRIBUTING.md`).
 - Teste de regressão do roteamento (`scripts/test-roteamento.sh`, 22 casos)
   integrado ao CI; varredura de padrões CNJ, CPF e CNPJ em
   `scripts/validate.sh`.

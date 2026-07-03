@@ -1,6 +1,7 @@
 # RFC-0002: Decision Replay — reconstruir a história de qualquer decisão
 
-- **Status**: rascunho
+- **Status**: aceita (2026-07-03 — adotada na prática pelos ADR-0003/0004,
+  que estreiam o campo "Origem"; convenção registrada em `CONTRIBUTING.md`)
 - **Data**: 2026-07-03
 - **Autor**: Claude Code, a partir de proposta do consultor externo
 

@@ -3,6 +3,8 @@
 - **Status**: proposto | aceito | substituído por ADR-XXXX
 - **Data**: AAAA-MM-DD
 - **Decisores**: quem decidiu
+- **Origem**: RFC/discussão/achado que gerou esta decisão (Decision Replay,
+  RFC-0002)
 
 ## Contexto
 

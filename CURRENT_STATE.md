@@ -23,7 +23,7 @@
 
 | Componente | Situação | Referência |
 |---|---|---|
-| Memory Engine persistente (clientes/casos/prazos) | **Desenho completo em revisão (RFC-0004)** — nada implementado | `docs/rfc/0004-memory-engine.md` |
+| Memory Engine persistente (clientes/casos/prazos) | **RFC-0004 APROVADA** (ADR-0003/0004); plano técnico do `mf-memoria` v1 aguardando aprovação; nada implementado | `docs/design/mf-memoria-v1.md` |
 | Audit Engine automatizado | Hoje é checklist manual (PR template) | `MF-OPERATIONS.md` §3 |
 | Meta-Orquestrador como agente autônomo | Hoje é papel exercido manualmente | `MF-AGENTS.md` §1 |
 | MF Evolution Engine (aprendizado com o modo de trabalho) | v0 manual implementado (`memory/registro-de-trabalho.md`); automação no backlog | `MF-OPERATIONS.md` §9 |
@@ -35,14 +35,15 @@
 
 ## Pendências que dependem do Dr. Márcio
 
-- **Identidade do repositório** (achado A2 da revisão constitucional):
-  separar plugin público × MF-AOS privado, ou assumir fork privado — ver
-  `docs/reviews/2026-07-revisao-constitucional.md`.
-- Escolha de licença do repositório (hoje sem `LICENSE` — decisão jurídica,
-  travada pela pendência acima).
+- **Executar a separação de repositórios** (DECIDIDA — ADR-0004): criar o
+  repositório privado do MF-AOS e migrar os documentos de negócio (Fase F0
+  do plano `docs/design/mf-memoria-v1.md`); a criação do repo é ato do Dr.
+  Márcio ou de sessão com acesso autorizado a ele.
+- Escolha de licença do plugin público (destravada pelo ADR-0004; requer
+  verificação de autoria junto a Misael Holanda).
+- **Aprovar o plano técnico do `mf-memoria` v1**
+  (`docs/design/mf-memoria-v1.md`) — gate final antes do primeiro código.
 - Ativar Discussions/Wiki/Projects/labels no GitHub (configuração de
   interface, sem API disponível nesta sessão) — passo a passo em
   `playbooks/configurar-github.md`.
 - Formato do Command Center (painel no fluxo do Claude Code vs. web).
-- **Revisão da RFC-0004 (Memory Engine)** — 5 questões abertas ao final do
-  documento; a implementação da Onda 2 aguarda essa aprovação.

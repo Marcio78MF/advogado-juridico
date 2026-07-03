@@ -53,3 +53,10 @@ para revisão humana — invariante de produto (`MF-ARCHITECTURE.md` §3).
 
 Mudanças estruturais exigem um ADR em `docs/adr/` (template incluso).
 Propostas maiores, ainda em discussão, começam como RFC em `docs/rfc/`.
+
+**Decision Replay** (RFC-0002): todo ADR preenche o campo "Origem" (RFC,
+discussão ou achado que o gerou); todo commit que materializa uma decisão
+cita o artefato no corpo da mensagem (`Ref: ADR-0003`); entradas do
+`memory/decision-log.md` referenciam o artefato mais próximo. Objetivo:
+qualquer decisão reconstituível anos depois via `git log --grep` + a cadeia
+RFC → ADR → commit.
