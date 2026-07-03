@@ -1,8 +1,7 @@
 # Playbooks
 
-Procedimentos operacionais repetíveis do MF-AOS. Um playbook nasce quando um
-processo foi executado com sucesso e vai se repetir — é a materialização do
-Self Evolution Engine (`MF-OPERATIONS.md` §1, passo "o que virou padrão?").
+Procedimentos operacionais repetíveis deste plugin. Um playbook nasce
+quando um processo foi executado com sucesso e vai se repetir.
 
 | Playbook | Quando usar |
 |---|---|
@@ -10,5 +9,4 @@ Self Evolution Engine (`MF-OPERATIONS.md` §1, passo "o que virou padrão?").
 | [`release.md`](./release.md) | Lançar nova versão do plugin (espelha `RELEASE.md`) |
 | [`configurar-github.md`](./configurar-github.md) | Configurações do GitHub que exigem interface (labels, Discussions, Wiki, Projects) |
 
-Convenção: título, pré-condições, passos numerados, critério de "pronto"
-(Audit Engine, `MF-OPERATIONS.md` §3).
+Convenção: título, pré-condições, passos numerados, critério de "pronto".

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Teste de regressão do roteamento do hook detectar-demanda-juridica.sh.
-# Toda mudança no hook DEVE passar aqui (MF-ARCHITECTURE.md §12).
+# Toda mudança no hook DEVE passar aqui antes de qualquer PR.
 # Nasceu do achado A3 da revisão constitucional de 2026-07: o padrão "RE "
 # roteava qualquer frase contendo "sobre" para analise-sentenca.
 set -euo pipefail
@@ -42,7 +42,7 @@ testar "preparar audiência de instrução de amanhã" "preparacao-audiencias"
 testar "esqueleto da petição inicial" "resumo-pecas"
 # "novo cliente" roteia para conflict-check MESMO em pedido de onboarding:
 # precedência deliberada — conflito é verificado antes de qualquer entrada
-# de cliente (MF-OPERATIONS.md §5, etapa bloqueante).
+# de cliente (etapa bloqueante; CED-OAB).
 testar "kit de entrada de novo cliente" "conflict-check"
 testar "corrige só essa cláusula do contrato" "edicao-cirurgica"
 testar "comunicar o cliente sobre o andamento" "comunicados-clientes"

@@ -6,6 +6,14 @@ versionamento conforme [SemVer](https://semver.org/lang/pt-BR/) — política em
 
 ## [Não lançado]
 
+### Removido
+- **Separação de repositórios (F0, ADR-0004)**: blueprint estratégico
+  (`MF-*.md`), `CURRENT_STATE.md` e `memory/` migrados para o repositório
+  privado do MF-AOS. Este repositório volta a ser somente o plugin público
+  + governança técnica; `CLAUDE.md` reescrito para o escopo do plugin.
+  Nota: os arquivos permanecem no histórico Git — expurgo definitivo
+  exigiria reescrita de histórico (ação irreversível, não autorizada).
+
 ### Corrigido
 - **Roteamento (hook)**: o padrão `RE |REsp` casava com o meio de palavras
   comuns ("sobre", "sempre"), roteando praticamente qualquer frase para

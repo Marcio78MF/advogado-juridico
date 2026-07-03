@@ -1,8 +1,7 @@
 # Prompt Library
 
 Prompts reutilizáveis que provaram valor e ainda não justificam virar skill
-(critério de promoção: `MF-AGENTS.md` §5 — quando um prompt daqui é usado
-recorrentemente, ele é candidato a skill via
+(quando um prompt daqui é usado recorrentemente, é candidato a skill via
 `playbooks/criar-nova-skill.md`).
 
 Convenção por arquivo: contexto de uso, o prompt em bloco de código, e

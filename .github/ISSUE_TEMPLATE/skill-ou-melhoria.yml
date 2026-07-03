@@ -14,8 +14,8 @@ body:
     attributes:
       label: Essa demanda já se repetiu?
       description: >
-        Critério de MF-AGENTS.md §5 — skill nova exige demanda recorrente
-        não coberta pelas skills existentes.
+        Skill nova exige demanda recorrente não coberta pelas skills
+        existentes (ver playbooks/criar-nova-skill.md).
       options:
         - "Sim, três vezes ou mais"
         - "Sim, uma ou duas vezes"
@@ -26,6 +26,6 @@ body:
     id: cobertura
     attributes:
       label: Por que nenhuma das 18 skills atuais cobre isso
-      description: Consulte a tabela do README.md e MF-AGENTS.md §3.
+      description: Consulte a tabela do README.md.
     validations:
       required: true

@@ -7,8 +7,8 @@ description: "This skill should be used when the user asks to 'onboarding client
 Antes de produzir qualquer material de onboarding, pergunte: **"O conflict
 check deste cliente já foi realizado?"** Se a resposta for não ou incerta,
 PARE e execute primeiro a skill `conflict-check` — a verificação de conflito
-de interesses precede toda entrada de cliente, sem exceção (CED-OAB;
-MF-OPERATIONS.md §5). Só prossiga com confirmação explícita do advogado.
+de interesses precede toda entrada de cliente, sem exceção (CED-OAB).
+Só prossiga com confirmação explícita do advogado.
 
 ## Função
 Produzir **kit de onboarding**: checklist documental por área, carta de boas-vindas, orientações de conduta e cronograma **indicativo**. Personalize com nome do cliente, área e tipo de serviço contratado.

@@ -10,10 +10,10 @@
 - [ ] Documentação / blueprint (`docs`)
 - [ ] Infraestrutura / CI (`chore`, `ci`)
 
-## Checklist (Audit Engine — MF-OPERATIONS.md §3)
+## Checklist
 
-- [ ] `scripts/validate.sh` passa
+- [ ] `scripts/validate.sh` e `scripts/test-roteamento.sh` passam
 - [ ] Nenhum dado real de cliente, número de processo ou credencial no diff
 - [ ] Skill de conteúdo jurídico preserva o aviso de rascunho para revisão humana
-- [ ] Documentação correspondente atualizada (`MF-*.md`, `README.md`, `CURRENT_STATE.md`)
+- [ ] Documentação correspondente atualizada (`README.md`, `CHANGELOG.md`)
 - [ ] Versão em `plugin.json` ajustada se o comportamento do plugin mudou

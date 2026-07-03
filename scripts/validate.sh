@@ -33,10 +33,10 @@ if [ ! -x hooks/detectar-demanda-juridica.sh ]; then
   erro "hooks/detectar-demanda-juridica.sh ausente ou sem permissão de execução"
 fi
 
-# 5. Documentos do blueprint existem
-for doc in MF-VISION-2030.md MF-CONSTITUTION.md MF-PRODUCT.md MF-ARCHITECTURE.md MF-AGENTS.md MF-OPERATIONS.md CLAUDE.md CURRENT_STATE.md; do
+# 5. Documentos operacionais do plugin existem
+for doc in CLAUDE.md README.md CONTRIBUTING.md SECURITY.md; do
   if [ ! -f "$doc" ]; then
-    erro "documento do blueprint ausente: $doc"
+    erro "documento ausente: $doc"
   fi
 done
 

@@ -2,10 +2,9 @@
 
 ## Antes de tudo
 
-Leia `MF-CONSTITUTION.md`. Toda contribuição — humana ou por agente de IA —
-segue os princípios de lá. Em particular: nunca commitar dado real de cliente
-(`SECURITY.md`) e nunca criar skill que duplica uma existente
-(`MF-AGENTS.md` §5).
+Duas regras inegociáveis: nunca commitar dado real de cliente
+(`SECURITY.md`) e nunca criar skill que duplica uma existente (verifique a
+tabela do `README.md` antes; ver `playbooks/criar-nova-skill.md`).
 
 ## Fluxo de trabalho
 
@@ -35,8 +34,8 @@ Mensagens em português, no formato:
 
 ## Versionamento (SemVer)
 
-A versão vive em `.claude-plugin/plugin.json` e segue a política de
-`MF-ARCHITECTURE.md` §13. O processo de release está em `RELEASE.md`.
+A versão vive em `.claude-plugin/plugin.json`; a tabela de tipos acima
+define o bump. O processo de release está em `RELEASE.md`.
 
 ## Estrutura de uma skill
 
@@ -47,16 +46,17 @@ skills/<nome-da-skill>/
 ```
 
 Toda skill que produz conteúdo jurídico deve preservar o aviso de rascunho
-para revisão humana — invariante de produto (`MF-ARCHITECTURE.md` §3).
+para revisão humana — invariante de produto deste plugin, sem exceção. O
+mesmo vale para citações: dispositivo, súmula ou precedente sem verificação
+em fonte deve ser marcado `[CONFERIR NA FONTE]`.
 
 ## Decisões de arquitetura
 
 Mudanças estruturais exigem um ADR em `docs/adr/` (template incluso).
 Propostas maiores, ainda em discussão, começam como RFC em `docs/rfc/`.
 
-**Decision Replay** (RFC-0002): todo ADR preenche o campo "Origem" (RFC,
-discussão ou achado que o gerou); todo commit que materializa uma decisão
-cita o artefato no corpo da mensagem (`Ref: ADR-0003`); entradas do
-`memory/decision-log.md` referenciam o artefato mais próximo. Objetivo:
-qualquer decisão reconstituível anos depois via `git log --grep` + a cadeia
-RFC → ADR → commit.
+**Decision Replay** (RFC-0002): todo ADR preenche o campo "Origem" e todo
+commit que materializa uma decisão cita o artefato no corpo da mensagem
+(`Ref: ADR-0003`). Desde a separação (ADR-0004), decisões novas do MF-AOS
+são registradas no repositório privado; aqui entram apenas ADRs
+estritamente do plugin.

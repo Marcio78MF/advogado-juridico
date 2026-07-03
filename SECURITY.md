@@ -18,8 +18,7 @@ falta ética.
 
 - Varredura de segredos (gitleaks) em todo push e pull request (CI).
 - Checklist obrigatório de dado sensível no template de PR.
-- Regra permanente em `MF-CONSTITUTION.md` §5 (Security First) e
-  `MF-OPERATIONS.md` §2.
+- Regra permanente e inegociável deste repositório (Security First).
 
 ## Como reportar uma vulnerabilidade ou exposição
 
@@ -29,5 +28,5 @@ Se você identificar dado sensível commitado ou uma vulnerabilidade:
 2. Contate o proprietário do repositório diretamente
    (aba *Security* → *Report a vulnerability* do GitHub, ou e-mail do
    proprietário).
-3. Dado sensível já commitado exige reescrita de histórico — essa é uma ação
-   irreversível que só o Dr. Márcio autoriza (`MF-CONSTITUTION.md` §4).
+3. Dado sensível já commitado exige reescrita de histórico — ação
+   irreversível que só o proprietário do repositório autoriza.

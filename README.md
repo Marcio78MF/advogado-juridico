@@ -2,22 +2,17 @@
 
 Suite completa de IA jurídica para Claude Code: orquestrador inteligente que detecta automaticamente a demanda do advogado e ativa a skill especializada correta — com coleta estruturada de informações antes de gerar qualquer documento.
 
-Este plugin é a base concreta do **MF Autonomous Operating System (MF-AOS)**,
-o blueprint de longo prazo para o ecossistema tecnológico do escritório. Veja:
-
-- [`MF-VISION-2030.md`](./MF-VISION-2030.md) — estrela-guia: o problema em 5 anos e as ondas de capacidade
-- [`MF-CONSTITUTION.md`](./MF-CONSTITUTION.md) — princípios imutáveis
-- [`MF-PRODUCT.md`](./MF-PRODUCT.md) — visão, roadmap de 24 meses e backlog
-- [`MF-ARCHITECTURE.md`](./MF-ARCHITECTURE.md) — arquitetura técnica e de dados
-- [`MF-AGENTS.md`](./MF-AGENTS.md) — papéis e mapeamento às skills
-- [`MF-OPERATIONS.md`](./MF-OPERATIONS.md) — auditoria, memória e evolução contínua
-- [`CLAUDE.md`](./CLAUDE.md) — instruções operacionais para o Claude Code
-- [`CURRENT_STATE.md`](./CURRENT_STATE.md) — estado real: o que existe vs. visão-alvo
+Este repositório contém o **plugin público**: skills, hook de roteamento e
+a governança técnica correspondente. O blueprint estratégico do MF-AOS
+(visão, roadmap, memória institucional) vive em repositório privado
+separado (decisão registrada em
+[`docs/adr/0004-separacao-repositorios.md`](./docs/adr/0004-separacao-repositorios.md)).
 
 Governança de engenharia: [`CONTRIBUTING.md`](./CONTRIBUTING.md),
 [`SECURITY.md`](./SECURITY.md), [`RELEASE.md`](./RELEASE.md),
-[`CHANGELOG.md`](./CHANGELOG.md), decisões em [`docs/adr/`](./docs/adr/),
-propostas em [`docs/rfc/`](./docs/rfc/), procedimentos em
+[`CHANGELOG.md`](./CHANGELOG.md), decisões históricas em
+[`docs/adr/`](./docs/adr/) e [`docs/rfc/`](./docs/rfc/) (congeladas —
+novas decisões são registradas no repositório privado), procedimentos em
 [`playbooks/`](./playbooks/).
 
 ## Instalação

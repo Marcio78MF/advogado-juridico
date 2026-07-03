@@ -15,15 +15,10 @@ Settings → General → Features → habilitar **Discussions**. Categorias
 sugeridas: "Ideias" (novas skills/automações), "Decisões em discussão"
 (RFCs), "Dúvidas de uso".
 
-## Projects
+## Projects e Milestones
 
-Criar um Project "MF-AOS Roadmap" com colunas por trimestre (T1–T8),
-importando os itens do backlog de `MF-PRODUCT.md` §8 como issues.
-
-## Milestones
-
-Uma milestone por trimestre do roadmap (`T2 — Memória`, `T3 — Auditoria`,
-etc.), com as issues correspondentes.
+Planejamento de produto vive no repositório privado do MF-AOS (ADR-0004);
+aqui, usar issues/milestones apenas para manutenção do plugin.
 
 ## Wiki
 
@@ -39,5 +34,4 @@ Manter **desabilitada** — a documentação vive no repositório
 
 ## Pronto quando
 
-Todos os itens acima conferidos e `CURRENT_STATE.md` atualizado removendo a
-pendência correspondente.
+Todos os itens acima conferidos.
