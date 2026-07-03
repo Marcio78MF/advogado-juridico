@@ -32,11 +32,24 @@ O que existe de fato, hoje, neste repositório:
 hooks/detectar-demanda-juridica.sh   — hook UserPromptSubmit
 skills/orquestrador-juridico/  — roteador de demanda
 skills/<17 outras>/            — skills especializadas (ver README.md)
+.github/                       — CI, Dependabot, templates, CODEOWNERS
+docs/adr/, docs/rfc/           — decisões e propostas de arquitetura
+playbooks/, prompts/, memory/  — procedimentos, prompts e memória institucional
+scripts/validate.sh            — validação estrutural (rodar antes de todo PR)
+CURRENT_STATE.md               — fonte única de verdade do estado implementado
 ```
 
-Tudo que é "visão-alvo" nos documentos `MF-*.md` está marcado como tal —
-nunca tratar visão-alvo como já implementada ao reportar progresso ao Dr.
-Márcio.
+A fonte de verdade detalhada sobre o que existe vs. visão-alvo é
+`CURRENT_STATE.md` — consultar antes de reportar progresso ao Dr. Márcio, e
+atualizar sempre que o estado implementado mudar.
+
+## Loop pós-tarefa obrigatório
+
+Ao fim de qualquer tarefa não-trivial: rodar `bash scripts/validate.sh`;
+aplicar o Audit Engine (`MF-OPERATIONS.md` §3); atualizar `CURRENT_STATE.md`
+e o documento `MF-*.md` afetado; e, se a tarefa foi trabalho jurídico,
+acrescentar uma linha anônima em `memory/registro-de-trabalho.md`
+(MF Evolution Engine, `MF-OPERATIONS.md` §9).
 
 ## Como trabalhar nesta base
 

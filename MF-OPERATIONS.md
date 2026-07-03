@@ -128,7 +128,29 @@ Memory Engine (§2) totalmente amadurecido e consultável por todos os agentes
 de domínio (`MF-AGENTS.md` §3). Não é um componente separado a ser construído
 do zero.
 
-## 9. Governança — quando parar e perguntar
+## 9. MF Evolution Engine — aprendizado com o modo de trabalho
+
+Diferente do Self Evolution Engine (§1), que observa **o sistema**, o MF
+Evolution Engine observa **o modo de trabalhar do escritório**: que tipos de
+demanda o Dr. Márcio atende, com que frequência, e com quais ferramentas.
+O objetivo é transformar know-how operacional em ativo — skills, playbooks e
+automações — em vez de deixá-lo preso a prompts avulsos ou à memória de quem
+executa.
+
+**Hoje (v0, implementado)**: registro anônimo e agregado em
+`memory/registro-de-trabalho.md`. Ao fim de cada sessão de trabalho jurídico
+relevante, registrar tipo de demanda + skill usada (nunca cliente, processo
+ou conteúdo — `SECURITY.md`). Regra de promoção: **três ocorrências do mesmo
+padrão sem skill dedicada** disparam uma proposta formal (template de issue
+"Propor skill ou melhoria"), avaliada pelo critério de `MF-AGENTS.md` §5.
+
+**Visão-alvo**: quando o Memory Engine persistente existir (roadmap T2), esse
+registro passa a ser alimentado automaticamente pelo orquestrador a cada
+demanda roteada, e o Meta Orchestrator passa a propor skills, botões e
+automações proativamente — fechando o ciclo: o sistema aprende com o
+advogado, não apenas com o código.
+
+## 10. Governança — quando parar e perguntar
 
 Reforçando `MF-CONSTITUTION.md` §4: interromper o trabalho autônomo apenas
 diante de decisão jurídica de mérito, decisão estratégica sem precedente,

@@ -100,9 +100,20 @@ em um trimestre do roadmap.
 > Backlog de alto nível. Detalhamento técnico de cada item vive em issues do
 > GitHub quando aplicável.
 
-- [ ] Publicar `MF-CONSTITUTION.md`, `MF-ARCHITECTURE.md`, `MF-PRODUCT.md`,
+- [x] Publicar `MF-CONSTITUTION.md`, `MF-ARCHITECTURE.md`, `MF-PRODUCT.md`,
       `MF-AGENTS.md`, `MF-OPERATIONS.md`, `CLAUDE.md` (este blueprint).
-- [ ] Mapear as 18 skills existentes aos papéis de agente (`MF-AGENTS.md`).
+- [x] Mapear as 18 skills existentes aos papéis de agente (`MF-AGENTS.md`).
+- [x] Fundação de engenharia: CI, Dependabot, templates, CODEOWNERS,
+      SECURITY, CONTRIBUTING, CHANGELOG, RELEASE, ADRs, RFCs, playbooks,
+      prompts, memória institucional, `CURRENT_STATE.md`, devcontainer.
+- [x] MF Evolution Engine v0 (registro manual de padrões de trabalho —
+      `MF-OPERATIONS.md` §9).
+- [ ] Configurações de interface do GitHub: labels, milestones, Projects,
+      Discussions, branch protection (`playbooks/configurar-github.md` —
+      depende do Dr. Márcio).
+- [ ] Decidir a licença do repositório (decisão jurídica — Dr. Márcio).
+- [ ] Introduzir monorepo/tooling junto com o primeiro código de aplicação
+      (ADR-0002).
 - [ ] Desenhar o esquema mínimo de dados do Memory Engine (clientes, casos,
       prazos) — ver `MF-ARCHITECTURE.md` §Modelo de Dados.
 - [ ] Especificar o checklist do Audit Engine por tipo de entrega (peça,

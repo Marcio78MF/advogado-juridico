@@ -18,8 +18,11 @@
 performance, duplicações, gargalos, skills que faltam — e propor evolução
 contínua (alimenta o Self Evolution Engine, `MF-OPERATIONS.md`).
 
-**Hoje**: exercido implicitamente por quem opera este repositório ao revisar
-o backlog executivo (`MF-PRODUCT.md` §8) e o histórico de commits.
+**Hoje**: exercido por quem opera este repositório, com três artefatos
+concretos sob sua responsabilidade: manter `CURRENT_STATE.md` fiel ao
+implementado, manter o backlog executivo (`MF-PRODUCT.md` §8) priorizado, e
+revisar `memory/registro-de-trabalho.md` em busca de padrões que devam virar
+skill (MF Evolution Engine, `MF-OPERATIONS.md` §9).
 
 ## 2. Chief Orchestrator / Orquestrador Jurídico
 

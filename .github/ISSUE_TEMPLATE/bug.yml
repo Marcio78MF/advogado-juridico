@@ -1,0 +1,26 @@
+name: Reportar problema
+description: Uma skill, o orquestrador ou o hook se comportou de forma errada
+labels: ["bug"]
+body:
+  - type: input
+    id: skill
+    attributes:
+      label: Skill ou componente afetado
+      placeholder: ex. gerador-minutas, orquestrador-juridico, hook
+    validations:
+      required: true
+  - type: textarea
+    id: comportamento
+    attributes:
+      label: O que aconteceu
+      description: >
+        Descreva o comportamento errado. NÃO cole dado real de cliente, número
+        de processo ou conteúdo de peça real — use exemplo fictício equivalente.
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: O que era esperado
+    validations:
+      required: true

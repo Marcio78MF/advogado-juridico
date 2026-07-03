@@ -11,6 +11,13 @@ o blueprint de longo prazo para o ecossistema tecnológico do escritório. Veja:
 - [`MF-AGENTS.md`](./MF-AGENTS.md) — papéis e mapeamento às skills
 - [`MF-OPERATIONS.md`](./MF-OPERATIONS.md) — auditoria, memória e evolução contínua
 - [`CLAUDE.md`](./CLAUDE.md) — instruções operacionais para o Claude Code
+- [`CURRENT_STATE.md`](./CURRENT_STATE.md) — estado real: o que existe vs. visão-alvo
+
+Governança de engenharia: [`CONTRIBUTING.md`](./CONTRIBUTING.md),
+[`SECURITY.md`](./SECURITY.md), [`RELEASE.md`](./RELEASE.md),
+[`CHANGELOG.md`](./CHANGELOG.md), decisões em [`docs/adr/`](./docs/adr/),
+propostas em [`docs/rfc/`](./docs/rfc/), procedimentos em
+[`playbooks/`](./playbooks/).
 
 ## Instalação
 

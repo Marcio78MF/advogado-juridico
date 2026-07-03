@@ -1,0 +1,11 @@
+# Mantém as GitHub Actions atualizadas. Quando o repositório ganhar código de
+# aplicação (npm, docker), adicionar os ecossistemas correspondentes aqui —
+# ver docs/adr/0002-adiar-monorepo.md.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    labels:
+      - "dependencias"

@@ -1,0 +1,41 @@
+# CURRENT_STATE — Estado Real do Sistema
+
+> Fonte única de verdade sobre **o que existe de fato** no MF-AOS, mantida
+> pelo papel de Meta Orchestrator (`MF-AGENTS.md` §1). Atualizar sempre que o
+> estado implementado mudar — descrever visão-alvo como implementada é
+> violação de `MF-CONSTITUTION.md` §6.
+
+**Última atualização**: 2026-07-03
+
+## Implementado e funcional
+
+| Componente | Estado |
+|---|---|
+| Plugin `advogado-juridico` v1.0.0 | Funcional (instalação local) |
+| Hook `UserPromptSubmit` de detecção de demanda | Funcional |
+| Skill orquestradora + 17 skills especializadas | Funcionais (ver `README.md`) |
+| Blueprint MF-AOS (6 documentos) | Publicado |
+| CI: validação estrutural, ShellCheck, gitleaks | Configurado (valida a partir do próximo push) |
+| Governança: templates, CODEOWNERS, SECURITY, CONTRIBUTING, ADRs, RFCs | Publicado |
+| Playbooks, biblioteca de prompts, memória institucional | Estrutura criada, conteúdo inicial |
+
+## Não implementado (visão-alvo)
+
+| Componente | Situação | Referência |
+|---|---|---|
+| Memory Engine persistente (clientes/casos/prazos) | Roadmap T2 | `MF-ARCHITECTURE.md` §4 |
+| Audit Engine automatizado | Hoje é checklist manual (PR template) | `MF-OPERATIONS.md` §3 |
+| Meta-Orquestrador como agente autônomo | Hoje é papel exercido manualmente | `MF-AGENTS.md` §1 |
+| MF Evolution Engine (aprendizado com o modo de trabalho) | v0 manual implementado (`memory/registro-de-trabalho.md`); automação no backlog | `MF-OPERATIONS.md` §9 |
+| Integrações Google Workspace / WhatsApp | Roadmap T4+ | `MF-ARCHITECTURE.md` §8 |
+| Business Engine (CRM, honorários) | Roadmap T5 | `MF-OPERATIONS.md` §4 |
+| Command Center / Mission Control | Roadmap T6; formato ainda não decidido | `MF-OPERATIONS.md` §7 |
+| Monorepo (pnpm/TurboRepo), Docker | Adiado deliberadamente | `docs/adr/0002-adiar-monorepo.md` |
+
+## Pendências que dependem do Dr. Márcio
+
+- Escolha de licença do repositório (hoje sem `LICENSE` — decisão jurídica).
+- Ativar Discussions/Wiki/Projects/labels no GitHub (configuração de
+  interface, sem API disponível nesta sessão) — passo a passo em
+  `playbooks/configurar-github.md`.
+- Formato do Command Center (painel no fluxo do Claude Code vs. web).

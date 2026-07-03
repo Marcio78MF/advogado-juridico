@@ -1,0 +1,31 @@
+name: Propor skill ou melhoria
+description: Nova capacidade ou evolução de uma skill existente
+labels: ["proposta"]
+body:
+  - type: textarea
+    id: demanda
+    attributes:
+      label: Qual demanda do escritório isso resolve
+      description: Em termos de negócio, não de tecnologia.
+    validations:
+      required: true
+  - type: dropdown
+    id: recorrencia
+    attributes:
+      label: Essa demanda já se repetiu?
+      description: >
+        Critério de MF-AGENTS.md §5 — skill nova exige demanda recorrente
+        não coberta pelas skills existentes.
+      options:
+        - "Sim, três vezes ou mais"
+        - "Sim, uma ou duas vezes"
+        - "Não, é a primeira vez"
+    validations:
+      required: true
+  - type: textarea
+    id: cobertura
+    attributes:
+      label: Por que nenhuma das 18 skills atuais cobre isso
+      description: Consulte a tabela do README.md e MF-AGENTS.md §3.
+    validations:
+      required: true
