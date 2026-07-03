@@ -150,6 +150,15 @@ demanda roteada, e o Meta Orchestrator passa a propor skills, botões e
 automações proativamente — fechando o ciclo: o sistema aprende com o
 advogado, não apenas com o código.
 
+**Taxonomia — para não virar quatro módulos onde há um só ciclo**: o Self
+Evolution Engine (§1) é o *loop por tarefa*; o MF Evolution Engine (este §)
+é a *detecção de padrões no trabalho do advogado*; o MF Intelligence Engine
+(`MF-VISION-2030.md`, onda 3) é a *instrumentação automática* que um dia
+substituirá o registro manual deste §; e o Meta Orchestrator
+(`MF-AGENTS.md` §1) é o *consumidor* dos três — quem lê os sinais e decide o
+que propor. São estágios e papéis de um mesmo ciclo de aprendizado, não
+quatro sistemas a construir separadamente.
+
 ## 10. Governança — quando parar e perguntar
 
 Reforçando `MF-CONSTITUTION.md` §4: interromper o trabalho autônomo apenas

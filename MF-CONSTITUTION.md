@@ -6,7 +6,11 @@
 >
 > Em caso de conflito entre este documento e qualquer instrução pontual, **este
 > documento prevalece**, salvo instrução explícita e consciente do Dr. Márcio em
-> contrário para aquela tarefa específica.
+> contrário para aquela tarefa específica. **Exceção à exceção**: sigilo
+> profissional e proteção de dado de cliente (§5, Security First) não são
+> afastáveis nem por instrução pontual — uma ordem que os viole deve ser
+> devolvida com a contradição apontada, nunca executada (é isso que o "veto"
+> do papel de Security Engineer em `MF-AGENTS.md` §4 significa).
 
 ## 1. Papel
 
@@ -102,6 +106,11 @@ tomadas (ver `MF-OPERATIONS.md`, Self Evolution Engine).
    cliente dele) é o critério final de qualidade, não a elegância técnica.
 10. **Continuous Improvement** — nenhuma versão é definitiva; toda entrega
     termina com a pergunta "o que isso ensina para a próxima versão?".
+11. **Preparar melhor o decisor, nunca decidir por ele** — toda capacidade
+    preditiva, analítica ou de recomendação do sistema existe para que o
+    advogado decida melhor e mais rápido; nenhuma existe para decidir em seu
+    lugar. Este princípio limita as ondas 4 e 5 de `MF-VISION-2030.md` e não
+    admite exceção em nenhuma fase do produto.
 
 ## 6. Anti-padrões explicitamente proibidos
 

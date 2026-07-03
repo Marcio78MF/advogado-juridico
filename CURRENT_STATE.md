@@ -11,7 +11,7 @@
 
 | Componente | Estado |
 |---|---|
-| Plugin `advogado-juridico` v1.0.0 | Funcional (instalação local) |
+| Plugin `advogado-juridico` v1.0.1 | Funcional (instalação local); roteamento corrigido e coberto por 22 testes de regressão |
 | Hook `UserPromptSubmit` de detecção de demanda | Funcional |
 | Skill orquestradora + 17 skills especializadas | Funcionais (ver `README.md`) |
 | Blueprint MF-AOS (7 documentos, incl. `MF-VISION-2030.md`) | Publicado |
@@ -35,7 +35,11 @@
 
 ## Pendências que dependem do Dr. Márcio
 
-- Escolha de licença do repositório (hoje sem `LICENSE` — decisão jurídica).
+- **Identidade do repositório** (achado A2 da revisão constitucional):
+  separar plugin público × MF-AOS privado, ou assumir fork privado — ver
+  `docs/reviews/2026-07-revisao-constitucional.md`.
+- Escolha de licença do repositório (hoje sem `LICENSE` — decisão jurídica,
+  travada pela pendência acima).
 - Ativar Discussions/Wiki/Projects/labels no GitHub (configuração de
   interface, sem API disponível nesta sessão) — passo a passo em
   `playbooks/configurar-github.md`.

@@ -7,10 +7,14 @@ trabalhar do escritório e propor skills/automações.
 Regras:
 - Registrar apenas o **tipo** de demanda e a skill usada — nunca cliente,
   processo ou conteúdo.
+- **Granularidade temporal: mês, nunca dia.** Data exata + tipo de demanda
+  permitiria correlação com atos processuais públicos (achado A5 da revisão
+  constitucional de 2026-07) — o registro existe para detectar padrões, e
+  padrão não precisa de dia.
 - Ao fim de uma sessão de trabalho jurídico relevante, acrescentar uma linha.
 - Três ocorrências do mesmo padrão sem skill dedicada → abrir proposta
   (template "Propor skill ou melhoria").
 
-| Data | Tipo de demanda | Skill usada (ou "nenhuma") | Observação de padrão |
+| Mês | Tipo de demanda | Skill usada (ou "nenhuma") | Observação de padrão |
 |---|---|---|---|
 | *(primeiro registro entra na primeira sessão de trabalho jurídico após esta fundação)* | | | |

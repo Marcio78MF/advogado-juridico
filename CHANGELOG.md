@@ -6,7 +6,22 @@ versionamento conforme [SemVer](https://semver.org/lang/pt-BR/) — política em
 
 ## [Não lançado]
 
+### Corrigido
+- **Roteamento (hook)**: o padrão `RE |REsp` casava com o meio de palavras
+  comuns ("sobre", "sempre"), roteando praticamente qualquer frase para
+  `analise-sentenca`; substituído por padrões ancorados (achado A3 da
+  revisão constitucional).
+- **Hook**: classes de caracteres acentuados (`[aã]`, `[õo]`) falhavam sob
+  locale C (matching byte a byte); convertidas para alternações. Cobertos
+  também o imperativo "analise" e "esqueleto da petição".
+- **Hook**: saída trocada do campo JSON não documentado
+  `additionalSystemPrompt` para stdout simples, o contrato real do evento
+  `UserPromptSubmit` (achado A4).
+
 ### Adicionado
+- Teste de regressão do roteamento (`scripts/test-roteamento.sh`, 22 casos)
+  integrado ao CI; varredura de padrão CNJ de número de processo em
+  `scripts/validate.sh`.
 - `MF-VISION-2030.md`: estrela-guia de longo prazo — problema em 5 anos,
   diferenciação, cinco ondas de capacidade, princípios invioláveis e
   métricas de missão.

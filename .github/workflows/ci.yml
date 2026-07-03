@@ -16,6 +16,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validar manifesto, skills, hook e blueprint
         run: bash scripts/validate.sh
+      - name: Testar roteamento do hook
+        run: bash scripts/test-roteamento.sh
 
   shellcheck:
     name: ShellCheck (hooks e scripts)

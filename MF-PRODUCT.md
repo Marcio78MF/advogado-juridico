@@ -63,6 +63,12 @@ final e obrigatória de qualquer entrega.
 Este roadmap é revisado a cada trimestre fechado; a versão vigente é sempre
 a deste arquivo, não uma cópia externa.
 
+**Regra de precedência**: os trimestres acima são estimativas de calendário;
+os *gates* de onda de `MF-VISION-2030.md` §4 (uma onda só começa quando a
+anterior provou valor em uso) prevalecem sobre o calendário. Atrasar um
+trimestre para respeitar um gate é correto; antecipar um item furando o gate
+para "cumprir o roadmap" é violação de `MF-CONSTITUTION.md` §6.
+
 ## 5. Estratégia de custos
 
 - Priorizar o que já está disponível (Claude Code, Google Workspace que o
@@ -117,8 +123,18 @@ em um trimestre do roadmap.
 - [ ] Decidir a licença do repositório (decisão jurídica — Dr. Márcio).
 - [ ] Introduzir monorepo/tooling junto com o primeiro código de aplicação
       (ADR-0002).
+- [ ] **[prioridade alta]** ADR de storage do Memory Engine: decidir ONDE a
+      memória persistente viverá (arquivo estruturado local, SQLite, serviço)
+      — maior lacuna aberta apontada pela revisão constitucional (Future
+      Review §1).
 - [ ] Desenhar o esquema mínimo de dados do Memory Engine (clientes, casos,
-      prazos) — ver `MF-ARCHITECTURE.md` §Modelo de Dados.
+      prazos) — ver `MF-ARCHITECTURE.md` §Modelo de Dados; incluir campos de
+      desfecho (RFC-0003).
+- [ ] Golden set de qualidade de conteúdo por skill (hoje só há teste de
+      roteamento) — candidato ao T3/Audit Engine.
+- [ ] Guarda de contexto no hook para sessões de desenvolvimento (achado A8).
+- [ ] Orçamento de tamanho dos documentos de contexto permanente (achado A10).
+- [ ] Adotar convenção Decision Replay em `CONTRIBUTING.md` (RFC-0002).
 - [ ] Especificar o checklist do Audit Engine por tipo de entrega (peça,
       código, comunicado).
 - [ ] Avaliar qual integração do Google Workspace traz mais retorno imediato
