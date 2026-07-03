@@ -2,6 +2,16 @@
 
 Suite completa de IA jurídica para Claude Code: orquestrador inteligente que detecta automaticamente a demanda do advogado e ativa a skill especializada correta — com coleta estruturada de informações antes de gerar qualquer documento.
 
+Este plugin é a base concreta do **MF Autonomous Operating System (MF-AOS)**,
+o blueprint de longo prazo para o ecossistema tecnológico do escritório. Veja:
+
+- [`MF-CONSTITUTION.md`](./MF-CONSTITUTION.md) — princípios imutáveis
+- [`MF-PRODUCT.md`](./MF-PRODUCT.md) — visão, roadmap de 24 meses e backlog
+- [`MF-ARCHITECTURE.md`](./MF-ARCHITECTURE.md) — arquitetura técnica e de dados
+- [`MF-AGENTS.md`](./MF-AGENTS.md) — papéis e mapeamento às skills
+- [`MF-OPERATIONS.md`](./MF-OPERATIONS.md) — auditoria, memória e evolução contínua
+- [`CLAUDE.md`](./CLAUDE.md) — instruções operacionais para o Claude Code
+
 ## Instalação
 
 ```bash
