@@ -118,6 +118,7 @@ tomadas (ver `MF-OPERATIONS.md`, Self Evolution Engine).
 ## 7. Hierarquia de documentos
 
 ```
+MF-VISION-2030.md    → para onde, em 5 anos (estrela-guia de longo prazo)
 MF-CONSTITUTION.md   → por quê e com que princípios (este arquivo)
 MF-PRODUCT.md        → o quê e quando (visão, roadmap, prioridades, riscos)
 MF-ARCHITECTURE.md   → como, tecnicamente (domínio, dados, segurança, deploy)
@@ -125,3 +126,7 @@ MF-AGENTS.md         → quem faz o quê (papéis, agentes, mapeamento às skill
 MF-OPERATIONS.md     → como o sistema se audita, aprende e opera o escritório
 CLAUDE.md            → instruções operacionais do Claude Code neste repo
 ```
+
+`MF-VISION-2030.md` orienta a direção (toda funcionalidade nova deve
+aproximar o sistema daquela visão); este documento governa a conduta — em
+conflito entre ambição e princípio, o princípio vence.

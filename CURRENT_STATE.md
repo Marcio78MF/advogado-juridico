@@ -14,7 +14,7 @@
 | Plugin `advogado-juridico` v1.0.0 | Funcional (instalação local) |
 | Hook `UserPromptSubmit` de detecção de demanda | Funcional |
 | Skill orquestradora + 17 skills especializadas | Funcionais (ver `README.md`) |
-| Blueprint MF-AOS (6 documentos) | Publicado |
+| Blueprint MF-AOS (7 documentos, incl. `MF-VISION-2030.md`) | Publicado |
 | CI: validação estrutural, ShellCheck, gitleaks | Configurado (valida a partir do próximo push) |
 | Governança: templates, CODEOWNERS, SECURITY, CONTRIBUTING, ADRs, RFCs | Publicado |
 | Playbooks, biblioteca de prompts, memória institucional | Estrutura criada, conteúdo inicial |
@@ -31,6 +31,7 @@
 | Business Engine (CRM, honorários) | Roadmap T5 | `MF-OPERATIONS.md` §4 |
 | Command Center / Mission Control | Roadmap T6; formato ainda não decidido | `MF-OPERATIONS.md` §7 |
 | Monorepo (pnpm/TurboRepo), Docker | Adiado deliberadamente | `docs/adr/0002-adiar-monorepo.md` |
+| Engines de longo prazo: Intelligence, Cost Intelligence, Knowledge Graph, Prediction, AI Quality, Business Brain | Visão (ondas 3–5) | `MF-VISION-2030.md` §4 |
 
 ## Pendências que dependem do Dr. Márcio
 

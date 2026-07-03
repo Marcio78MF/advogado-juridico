@@ -34,7 +34,7 @@ if [ ! -x hooks/detectar-demanda-juridica.sh ]; then
 fi
 
 # 5. Documentos do blueprint existem
-for doc in MF-CONSTITUTION.md MF-PRODUCT.md MF-ARCHITECTURE.md MF-AGENTS.md MF-OPERATIONS.md CLAUDE.md CURRENT_STATE.md; do
+for doc in MF-VISION-2030.md MF-CONSTITUTION.md MF-PRODUCT.md MF-ARCHITECTURE.md MF-AGENTS.md MF-OPERATIONS.md CLAUDE.md CURRENT_STATE.md; do
   if [ ! -f "$doc" ]; then
     erro "documento do blueprint ausente: $doc"
   fi

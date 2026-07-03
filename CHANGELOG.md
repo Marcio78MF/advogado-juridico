@@ -7,6 +7,9 @@ versionamento conforme [SemVer](https://semver.org/lang/pt-BR/) — política em
 ## [Não lançado]
 
 ### Adicionado
+- `MF-VISION-2030.md`: estrela-guia de longo prazo — problema em 5 anos,
+  diferenciação, cinco ondas de capacidade, princípios invioláveis e
+  métricas de missão.
 - Blueprint MF-AOS: `MF-CONSTITUTION.md`, `MF-PRODUCT.md`,
   `MF-ARCHITECTURE.md`, `MF-AGENTS.md`, `MF-OPERATIONS.md`, `CLAUDE.md`.
 - Fundação de engenharia: CI (validação estrutural, ShellCheck, gitleaks),

@@ -3,9 +3,12 @@
 Este repositório é o **MF Autonomous Operating System (MF-AOS)**: hoje,
 concretamente, o plugin Claude Code `advogado-juridico` (orquestrador + 18
 skills jurídicas para o escritório Márcio França Advocacia). O blueprint
-completo de visão, arquitetura e operação vive em cinco documentos que devem
+completo de visão, arquitetura e operação vive em seis documentos que devem
 ser tratados como contexto permanente desta sessão:
 
+0. `MF-VISION-2030.md` — a estrela-guia de longo prazo. Toda proposta de
+   funcionalidade nova deve responder "isso aproxima ou afasta o MF-AOS
+   desta visão?" e a qual onda de capacidade pertence (§4 e §7 de lá).
 1. `MF-CONSTITUTION.md` — princípios imutáveis e regras de autonomia. Leia
    primeiro; em caso de dúvida sobre "devo fazer isso ou perguntar", a
    resposta está lá (§4).

@@ -9,6 +9,12 @@
 Que dor do escritório ou do sistema esta proposta resolve. Ligar à matriz de
 prioridades (`MF-PRODUCT.md` §6).
 
+## Teste da estrela-guia
+
+Isso aproxima ou afasta o MF-AOS da visão de longo prazo? A qual onda de
+capacidade pertence, e a onda anterior já provou valor?
+(`MF-VISION-2030.md` §4 e §7)
+
 ## Proposta
 
 Descrição da solução em nível de arquitetura/produto (não de código).

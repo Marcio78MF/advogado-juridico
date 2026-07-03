@@ -5,6 +5,7 @@ Suite completa de IA jurídica para Claude Code: orquestrador inteligente que de
 Este plugin é a base concreta do **MF Autonomous Operating System (MF-AOS)**,
 o blueprint de longo prazo para o ecossistema tecnológico do escritório. Veja:
 
+- [`MF-VISION-2030.md`](./MF-VISION-2030.md) — estrela-guia: o problema em 5 anos e as ondas de capacidade
 - [`MF-CONSTITUTION.md`](./MF-CONSTITUTION.md) — princípios imutáveis
 - [`MF-PRODUCT.md`](./MF-PRODUCT.md) — visão, roadmap de 24 meses e backlog
 - [`MF-ARCHITECTURE.md`](./MF-ARCHITECTURE.md) — arquitetura técnica e de dados

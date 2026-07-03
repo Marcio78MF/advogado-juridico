@@ -1,8 +1,11 @@
 # MF-PRODUCT — Visão, Roadmap e Priorização
 
-> Regido pelos princípios de `MF-CONSTITUTION.md`. Detalhes técnicos de como
-> cada item é construído estão em `MF-ARCHITECTURE.md`; papéis responsáveis
-> estão em `MF-AGENTS.md`.
+> Regido pelos princípios de `MF-CONSTITUTION.md` e orientado pela
+> estrela-guia de `MF-VISION-2030.md` — este documento cobre o horizonte
+> executável de 24 meses (ondas 1–2 e início da 3 da visão); as ondas
+> seguintes só entram aqui quando as anteriores provarem valor em uso.
+> Detalhes técnicos de como cada item é construído estão em
+> `MF-ARCHITECTURE.md`; papéis responsáveis estão em `MF-AGENTS.md`.
 
 ## 1. Visão do produto
 
