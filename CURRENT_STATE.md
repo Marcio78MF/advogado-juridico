@@ -23,7 +23,7 @@
 
 | Componente | Situação | Referência |
 |---|---|---|
-| Memory Engine persistente (clientes/casos/prazos) | Roadmap T2 | `MF-ARCHITECTURE.md` §4 |
+| Memory Engine persistente (clientes/casos/prazos) | **Desenho completo em revisão (RFC-0004)** — nada implementado | `docs/rfc/0004-memory-engine.md` |
 | Audit Engine automatizado | Hoje é checklist manual (PR template) | `MF-OPERATIONS.md` §3 |
 | Meta-Orquestrador como agente autônomo | Hoje é papel exercido manualmente | `MF-AGENTS.md` §1 |
 | MF Evolution Engine (aprendizado com o modo de trabalho) | v0 manual implementado (`memory/registro-de-trabalho.md`); automação no backlog | `MF-OPERATIONS.md` §9 |
@@ -44,3 +44,5 @@
   interface, sem API disponível nesta sessão) — passo a passo em
   `playbooks/configurar-github.md`.
 - Formato do Command Center (painel no fluxo do Claude Code vs. web).
+- **Revisão da RFC-0004 (Memory Engine)** — 5 questões abertas ao final do
+  documento; a implementação da Onda 2 aguarda essa aprovação.

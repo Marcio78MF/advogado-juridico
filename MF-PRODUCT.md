@@ -123,13 +123,10 @@ em um trimestre do roadmap.
 - [ ] Decidir a licença do repositório (decisão jurídica — Dr. Márcio).
 - [ ] Introduzir monorepo/tooling junto com o primeiro código de aplicação
       (ADR-0002).
-- [ ] **[prioridade alta]** ADR de storage do Memory Engine: decidir ONDE a
-      memória persistente viverá (arquivo estruturado local, SQLite, serviço)
-      — maior lacuna aberta apontada pela revisão constitucional (Future
-      Review §1).
-- [ ] Desenhar o esquema mínimo de dados do Memory Engine (clientes, casos,
-      prazos) — ver `MF-ARCHITECTURE.md` §Modelo de Dados; incluir campos de
-      desfecho (RFC-0003).
+- [x] Desenho completo do Memory Engine (entidades, storage local-first
+      SQLite cifrado + MCP, sigilo, anonimização, eventos, desfechos) —
+      **RFC-0004, em revisão pelo Dr. Márcio**; implementação só após
+      aprovação.
 - [ ] Golden set de qualidade de conteúdo por skill (hoje só há teste de
       roteamento) — candidato ao T3/Audit Engine.
 - [ ] **[prioridade alta]** Mapa de tratamento de dados do runtime (RIPD do
