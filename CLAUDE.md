@@ -52,7 +52,9 @@ Ao fim de qualquer tarefa não-trivial: rodar `bash scripts/validate.sh`;
 aplicar o Audit Engine (`MF-OPERATIONS.md` §3); atualizar `CURRENT_STATE.md`
 e o documento `MF-*.md` afetado; e, se a tarefa foi trabalho jurídico,
 acrescentar uma linha anônima em `memory/registro-de-trabalho.md`
-(MF Evolution Engine, `MF-OPERATIONS.md` §9).
+(MF Evolution Engine, `MF-OPERATIONS.md` §9) — **atenção: registro suspenso
+enquanto o repositório for público/instalável; ver o aviso no próprio
+arquivo**.
 
 ## Como trabalhar nesta base
 

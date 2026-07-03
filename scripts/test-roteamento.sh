@@ -13,7 +13,7 @@ testar() {
   local frase="$1" esperado="$2" obtido
   obtido=$(echo "{\"prompt\": \"$frase\"}" | bash hooks/detectar-demanda-juridica.sh \
     | grep -o 'skill: [a-z-]*' | sed 's/skill: //' || true)
-  obtido="${obtido:-orquestrador}"
+  obtido="${obtido:-orquestrador-juridico}"
   if [ "$obtido" = "$esperado" ]; then
     OK=$((OK + 1))
   else
@@ -23,8 +23,8 @@ testar() {
 }
 
 # Falsos positivos históricos (achado A3 — "sobre" continha "re ")
-testar "me ajude a pensar sobre o roadmap" "orquestrador"
-testar "quero informações sobre honorários" "orquestrador"
+testar "me ajude a pensar sobre o roadmap" "orquestrador-juridico"
+testar "quero informações sobre honorários" "orquestrador-juridico"
 testar "faça um post sobre direito do consumidor" "conteudo-autoridade"
 
 # Uma frase representativa por skill detectável

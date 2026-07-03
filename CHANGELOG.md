@@ -20,8 +20,13 @@ versionamento conforme [SemVer](https://semver.org/lang/pt-BR/) — política em
 
 ### Adicionado
 - Teste de regressão do roteamento (`scripts/test-roteamento.sh`, 22 casos)
-  integrado ao CI; varredura de padrão CNJ de número de processo em
+  integrado ao CI; varredura de padrões CNJ, CPF e CNPJ em
   `scripts/validate.sh`.
+- **Registro formal do hook** (`hooks/hooks.json` + campo `hooks` no
+  `plugin.json`) — achado B3 do red team: o script existia mas nada o
+  vinculava ao evento `UserPromptSubmit`; verificação adicionada ao CI.
+- Gate bloqueante de conflict-check na skill `onboarding-cliente`
+  (achado B1); fallback `jq` e tom de sugestão no hook (achado B18).
 - `MF-VISION-2030.md`: estrela-guia de longo prazo — problema em 5 anos,
   diferenciação, cinco ondas de capacidade, princípios invioláveis e
   métricas de missão.

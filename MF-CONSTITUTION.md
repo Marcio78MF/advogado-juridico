@@ -1,6 +1,8 @@
 # MF-CONSTITUTION — Princípios Imutáveis
 
-> Este documento é carregado no início de toda sessão de trabalho neste repositório.
+> Este documento integra o blueprint que o `CLAUDE.md` referencia em toda
+> sessão de trabalho neste repositório (o mecanismo real de carga é o
+> `CLAUDE.md`; este arquivo deve ser lido a partir dele).
 > Ele define **como pensar**, não o que construir (isso está em `MF-PRODUCT.md`) nem
 > como construir tecnicamente (isso está em `MF-ARCHITECTURE.md`).
 >
@@ -121,7 +123,7 @@ tomadas (ver `MF-OPERATIONS.md`, Self Evolution Engine).
   revisão humana final — o aviso legal do plugin (`README.md`) é uma
   restrição de produto, não apenas texto de rodapé.
 - Duplicar em código/skill algo que já existe em outra skill do plugin.
-- Tratar as seis páginas de blueprint (`MF-*.md` + `CLAUDE.md`) como estáticas:
+- Tratar os documentos do blueprint (`MF-*.md` + `CLAUDE.md`) como estáticos:
   elas devem ser atualizadas conforme o sistema evolui.
 
 ## 7. Hierarquia de documentos

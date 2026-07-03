@@ -100,7 +100,7 @@ em um trimestre do roadmap.
 | Peça/documento gerado por IA sem revisão humana chega ao cliente ou ao processo | Alto | Aviso legal obrigatório + checklist de revisão em toda skill de produção de documento (ver Audit Engine, `MF-OPERATIONS.md`) |
 | Vazamento de dado sensível de cliente (sigilo profissional, LGPD) | Alto | Skill `lgpd-escritorio`, princípio Security First, nunca versionar dado real de cliente neste repositório |
 | Conflito de interesse não detectado ao aceitar novo caso | Alto | Skill `conflict-check` obrigatória no fluxo de novo cliente (Legal Engine) |
-| Perda de prazo processual | Alto | Skill `gestao-prazos` +, quando existir, integração com Google Calendar |
+| Perda de prazo processual | Alto | Hoje: skill `gestao-prazos` como **apoio, não mitigação** — cálculo por LLM é probabilístico e a conferência humana continua sendo a defesa real (achado B9 do red team). Mitigação estrutural: motor determinístico de prazos (backlog) + Google Calendar |
 | Dependência excessiva de uma única sessão de IA sem persistência | Médio | Memory Engine (T2 do roadmap) |
 | Expansão prematura para "produto multi-escritório" sem validar com um só escritório | Médio | Regra Máxima em `MF-CONSTITUTION.md` — não superengenheirar antes do uso real |
 
@@ -132,6 +132,20 @@ em um trimestre do roadmap.
       desfecho (RFC-0003).
 - [ ] Golden set de qualidade de conteúdo por skill (hoje só há teste de
       roteamento) — candidato ao T3/Audit Engine.
+- [ ] **[prioridade alta]** Mapa de tratamento de dados do runtime (RIPD do
+      próprio fluxo): o que sai da máquina, para quem, contrato e base legal
+      LGPD (achado B2 do red team) — pré-requisito do Memory Engine.
+- [ ] **[prioridade alta]** Motor determinístico de prazos processuais
+      (calendários oficiais + regras CPC testáveis; LLM só na extração da
+      intimação) — primeiro candidato a código de aplicação (achado B9).
+- [ ] Fonte única declarativa de roteamento (tabela → gera hook e mapas do
+      orquestrador), eliminando as três fontes divergentes (achado B8).
+- [ ] Validar a integração do hook numa instalação limpa do plugin
+      (registro em hooks.json criado no achado B3; falta teste ponta a
+      ponta em ambiente real).
+- [ ] Conformidade OAB/CNJ sobre uso de IA (Res. CNJ 615/2025, diretrizes
+      OAB): política escrita de verificação de fontes, dever de informar o
+      cliente e responsabilidade por citação (achado B19).
 - [ ] Guarda de contexto no hook para sessões de desenvolvimento (achado A8).
 - [ ] Orçamento de tamanho dos documentos de contexto permanente (achado A10).
 - [ ] Adotar convenção Decision Replay em `CONTRIBUTING.md` (RFC-0002).

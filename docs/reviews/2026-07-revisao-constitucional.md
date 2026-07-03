@@ -99,10 +99,45 @@ escolha).
 
 ## Parte B — Red Team externo
 
-*(Relatório do agente independente consolidado abaixo — achados que
-coincidem com a Parte A estão marcados; os novos receberam numeração B.)*
+Agente independente, sem contexto prévio, instruído a provar que a
+arquitetura falhará. Leu todo o blueprint, a governança, o CI, 4 skills e
+**executou o hook contra prompts reais**. Síntese do veredicto adversarial:
 
-<!-- PARTE_B_PENDENTE -->
+> "Este repositório contém 60 KB de constituições e 7 KB de código, e o
+> código estava quebrado. Todas as garantias do sistema existem como prosa
+> que o modelo é convidado a obedecer, e zero delas como mecanismo que o
+> impeça de desobedecer. Enquanto a razão prosa:mecanismo não se inverter,
+> cada nova onda da visão adicionará promessas ao passivo, não capacidades
+> ao ativo."
+
+O veredicto foi aceito como tese central: **a métrica de saúde do MF-AOS
+passa a ser converter prosa em mecanismo** — cada garantia importante deve
+migrar de "instrução que o modelo lê" para "controle que executa" (teste,
+validação de CI, gate de skill, código determinístico).
+
+### Achados do red team e disposição
+
+| # | Achado (severidade) | Disposição |
+|---|---|---|
+| B1 | Conflict-check inexecutável (sem base de clientes para cruzar) e pulável pelo roteamento (CRÍTICO) | ✅ parcial: gate bloqueante adicionado à skill `onboarding-cliente` (pergunta obrigatória antes de qualquer kit). 🔶 A execução real do cruzamento depende do Memory Engine — registrado como requisito R1 do desenho (RFC-0004) |
+| B2 | Política de sigilo protege o Git e ignora o canal do runtime (sessão LLM, conectores, LGPD art. 33) (CRÍTICO) | ✅ reconhecido em `MF-ARCHITECTURE.md` §5; 🔶 mapa de tratamento do runtime no backlog com prioridade alta, pré-requisito do Memory Engine |
+| B3 | Hook lançado quebrado, contrato de API inventado e **sem registro** (`hooks/hooks.json` inexistente — o hook pode nunca ter sido acionado) (CRÍTICO) | ✅ regex/formato corrigidos na Parte A; ✅ `hooks/hooks.json` criado + campo `hooks` no `plugin.json` + verificação no CI; 🔶 teste em instalação limpa no backlog |
+| B4 | Identidade dupla + propriedade intelectual (autoria de terceiro, sem LICENSE, plano de negócio do escritório em repositório instalável) (CRÍTICO) | ⏸️ = achado A2, urgência elevada — decisão do Dr. Márcio |
+| B5 | Memory Engine sem uma única decisão de design, e Ondas 2–5 inteiras dependem dele (CRÍTICO) | ✅ endereçado: desenho técnico completo em `docs/rfc/0004-memory-engine.md`, em revisão pelo Dr. Márcio |
+| B6 | Contradição de precedência do veto (ALTO) | ✅ = achado A1, corrigido na Parte A (o red team leu o HEAD anterior). Residual aceito: o veto ainda é prosa; vira mecanismo com o Audit Engine |
+| B7 | Drift documental: contagens divergentes, claim falso de "carregado em toda sessão", regra de CHANGELOG obsoleta (ALTO) | ✅ corrigidos os quatro pontos citados; 🔶 verificação automatizada de consistência cruzada é candidata ao CI |
+| B8 | Três fontes de roteamento divergentes; if-chain de regex não escala; orquestrador dispara em "preciso de ajuda" (ALTO) | 🔶 fonte única declarativa no backlog; inversão LLM-first já prevista (Future Review §3) |
+| B9 | `gestao-prazos` é prosa probabilística apresentada como mitigação do risco mais fatal (ALTO) | ✅ matriz de riscos corrigida (skill = apoio, não mitigação); 🔶 motor determinístico de prazos no backlog com prioridade alta — primeiro candidato a código de aplicação |
+| B10 | Registro de trabalho vaza metadado operacional mesmo com granularidade mensal (repo instalável + timestamps de commit + PJe público) (ALTO) | ✅ registro **suspenso** até a decisão B4; pertence ao Memory Engine privado (RFC-0004) |
+| B11 | CI protege risco errado (gitleaks ≠ dado de cliente); revisão de fachada; branch protection nunca ativada (ALTO) | ✅ varredura CNJ+CPF+CNPJ no CI; ⏸️ branch protection segue pendente do Dr. Márcio (`playbooks/configurar-github.md`); limitação "nome de pessoa é indetectável por regex" documentada |
+| B12 | Bounded contexts são tabela, não fronteiras (MÉDIO) | ✅ terminologia corrigida em `MF-ARCHITECTURE.md` §9: taxonomia que prefigura contexts; viram reais com o Memory Engine |
+| B13 | "Conhecimento portável" é falso para tudo exceto a prosa (MÉDIO) | 🔶 aceito parcialmente: regra "domínio em `references/` (neutro), mecânica no `SKILL.md`" já vigente; extração de lógica de negócio para formato neutro fica como diretriz da Onda 2+ |
+| B14 | "Multi-tenant é extensão, não reescrita" é infalsificável hoje e falsa amanhã (MÉDIO) | ✅ afirmação removida de `MF-ARCHITECTURE.md` §11 e substituída pela versão honesta |
+| B15 | Contexto permanente sem freio de crescimento; proposta de kernel ~2k tokens + carga sob demanda (MÉDIO) | 🔶 = achado A10, descrição do item de backlog atualizada para a proposta do kernel |
+| B16 | Governança dimensionada para time que não existe; IA aprovando o próprio ADR (MÉDIO) | 🔶 aceito com gate: na primeira revisão trimestral, todo artefato de processo que estiver vazio/sem uso é cortado. Decisões de arquitetura tomadas por Claude ficam sujeitas a ratificação do Dr. Márcio na revisão seguinte |
+| B17 | Ondas 4–5 sem caminho estatístico (n pequeno, outcomes não capturados) (MÉDIO) | ✅ aceito: captura de desfecho entra no esquema da Onda 2 (RFC-0003/RFC-0004); Prediction reposicionado como *recuperação de casos semelhantes*, não aprendizado estatístico — n pequeno permite busca, não inferência |
+| B18 | Hook: dependência de python3, injeção imperativa sequestrável por texto colado, nomes não canônicos no teste (BAIXO) | ✅ fallback jq + saída silenciosa; tom rebaixado a sugestão explicitamente ignorável; nomes canônicos no teste |
+| B19 | Riscos ético-profissionais BR ignorados: Res. CNJ 615/2025, citação "de memória", dever de informar cliente (BAIXO na forma, ALTO no fundo) | ✅ invariante "nenhuma citação sem fonte verificada / marcador [CONFERIR NA FONTE]" em `MF-ARCHITECTURE.md` §3; 🔶 política formal OAB/CNJ no backlog |
 
 ## Future Review — retrospectiva imaginada de 2032
 

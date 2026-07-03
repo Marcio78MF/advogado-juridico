@@ -40,11 +40,21 @@ for doc in MF-VISION-2030.md MF-CONSTITUTION.md MF-PRODUCT.md MF-ARCHITECTURE.md
   fi
 done
 
-# 6. Nenhum número de processo no padrão CNJ (NNNNNNN-DD.AAAA.J.TR.OOOO) —
-#    dado real de caso nunca é versionado (SECURITY.md). Exemplos em docs
-#    devem usar o placeholder textual "NNNNNNN-DD.AAAA.J.TR.OOOO".
-if grep -rEl --exclude-dir=.git '[0-9]{7}-[0-9]{2}\.[0-9]{4}\.[0-9]\.[0-9]{2}\.[0-9]{4}' .; then
-  erro "padrão de número de processo CNJ encontrado nos arquivos acima — remover antes de commitar"
+# 6. Nenhum dado sensível em padrão detectável: número de processo CNJ
+#    (NNNNNNN-DD.AAAA.J.TR.OOOO), CPF (XXX.XXX.XXX-XX) ou CNPJ
+#    (XX.XXX.XXX/XXXX-XX) — dado real nunca é versionado (SECURITY.md).
+#    Exemplos em docs devem usar placeholders textuais.
+if grep -rEl --exclude-dir=.git '[0-9]{7}-[0-9]{2}\.[0-9]{4}\.[0-9]\.[0-9]{2}\.[0-9]{4}|[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}|[0-9]{2}\.[0-9]{3}\.[0-9]{3}/[0-9]{4}-[0-9]{2}' .; then
+  erro "padrão de dado sensível (CNJ/CPF/CNPJ) encontrado nos arquivos acima — remover antes de commitar"
+fi
+
+# 7. O hook está registrado no manifesto (achado B3 do red team: script sem
+#    registro em hooks.json nunca é acionado pelo plugin)
+if [ ! -f hooks/hooks.json ] || ! jq -e '.hooks.UserPromptSubmit' hooks/hooks.json >/dev/null 2>&1; then
+  erro "hooks/hooks.json ausente ou sem registro do evento UserPromptSubmit"
+fi
+if ! jq -e '.hooks' .claude-plugin/plugin.json >/dev/null 2>&1; then
+  erro "plugin.json sem o campo hooks apontando para hooks/hooks.json"
 fi
 
 if [ "$ERROS" -gt 0 ]; then

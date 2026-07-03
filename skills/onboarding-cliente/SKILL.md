@@ -3,6 +3,13 @@ name: "Onboarding completo de novo cliente"
 description: "This skill should be used when the user asks to 'onboarding cliente', 'novo cliente', 'checklist documental', 'carta de boas-vindas', 'integração de cliente', 'documentos para contratar', 'kit boas-vindas', 'orientações iniciais para cliente' ou precisa estruturar processo de entrada de novo cliente no escritório."
 ---
 
+## Pré-condição bloqueante: conflict check
+Antes de produzir qualquer material de onboarding, pergunte: **"O conflict
+check deste cliente já foi realizado?"** Se a resposta for não ou incerta,
+PARE e execute primeiro a skill `conflict-check` — a verificação de conflito
+de interesses precede toda entrada de cliente, sem exceção (CED-OAB;
+MF-OPERATIONS.md §5). Só prossiga com confirmação explícita do advogado.
+
 ## Função
 Produzir **kit de onboarding**: checklist documental por área, carta de boas-vindas, orientações de conduta e cronograma **indicativo**. Personalize com nome do cliente, área e tipo de serviço contratado.
 

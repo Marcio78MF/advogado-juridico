@@ -83,6 +83,13 @@ Modelo conceitual do domínio jurídico que toda skill deve respeitar:
 - Compliance transversal: LGPD (`lgpd-escritorio`) e ética profissional
   (`conteudo-autoridade` já embute regras da OAB) se aplicam a qualquer skill
   que produza conteúdo externo.
+- **Nenhuma citação sem fonte verificada**: dispositivo legal, súmula ou
+  precedente citado "de memória" pelo modelo deve ser marcado
+  `[CONFERIR NA FONTE]` no rascunho, e a verificação (via pesquisa em fonte
+  oficial ou no conector de jurisprudência) é etapa obrigatória do checklist
+  de revisão humana. Citação alucinada em peça protocolada é o modo de falha
+  ético-profissional mais documentado do uso de IA na advocacia — tratar
+  como invariante, não como boa prática.
 
 ## 4. Arquitetura de dados
 
@@ -118,6 +125,14 @@ apenas o esquema/modelo, nunca instâncias reais.
 - Toda integração externa futura (Google Workspace, WhatsApp) usa
   autenticação por conta própria do escritório, nunca credenciais
   compartilhadas ou hardcoded.
+- **O canal do runtime também é superfície de dados** (achado B2 do red
+  team): dado de cliente digitado numa sessão vai para os servidores do
+  provedor do modelo e para conectores de terceiros (ex.: pesquisa
+  jurisprudencial) — proteger o Git não basta. Pendência de prioridade alta
+  no backlog: mapa de tratamento do runtime (o que sai da máquina, para
+  quem, sob qual contrato e base legal LGPD — art. 33 para transferência
+  internacional) e política de mínimo necessário no intake (a skill só pede
+  o dado pessoal indispensável para a tarefa da sessão).
 
 ## 6. Arquitetura de deploy
 
@@ -165,9 +180,14 @@ apenas quando resolve um item da matriz de prioridades (`MF-PRODUCT.md`).
 | **Contratos** | Revisão contratual | `revisao-contratos` |
 | **Orquestração** | Roteamento de demanda | `orquestrador-juridico` |
 
-Esses contextos são a base para a futura divisão entre agentes especializados
-em `MF-AGENTS.md` — cada agente de domínio jurídico corresponde a um bounded
-context, não a uma skill isolada.
+**Honestidade de terminologia** (achado B12 do red team): hoje isso é uma
+*taxonomia de skills*, não bounded contexts em sentido DDD estrito — skills
+são Markdown lido pelo mesmo modelo, sem contratos de dados nem fronteiras
+executáveis. A tabela prefigura os contexts e orienta onde cada skill nova
+entra; os contexts viram reais quando o Memory Engine der a cada um dados e
+interfaces próprios. Esses contextos são a base para a futura divisão entre
+agentes especializados em `MF-AGENTS.md` — cada agente de domínio jurídico
+corresponde a um bounded context, não a uma skill isolada.
 
 ## 10. Eventos do sistema (visão-alvo)
 
@@ -179,11 +199,14 @@ context, não a uma skill isolada.
 ## 11. Estratégia de escalabilidade
 
 Escalar primeiro em **abrangência de skills** (mais demandas jurídicas
-cobertas) antes de escalar em **infraestrutura** (mais usuários/tenants). A
-arquitetura de dados (§4) e o modelo de domínio (§9) já são desenhados para
-suportar múltiplos casos e clientes por escritório; suportar múltiplos
-escritórios é uma extensão (namespace por tenant), não uma reescrita — mas só
-é construída quando decidida (ver §6).
+cobertas) antes de escalar em **infraestrutura** (mais usuários/tenants). O
+*modelo de domínio* (§4, §9) inclui a dimensão de múltiplos casos e clientes
+e pode incluir a dimensão tenant — mas isso é tudo que se pode afirmar hoje:
+transformar um plugin local sem camada de dados em serviço hospedado
+multi-escritório (autenticação, isolamento, RBAC, sigilo entre bancas) é
+construção nova, não extensão (achado B14 do red team corrigindo a versão
+anterior deste parágrafo, que prometia "extensão, não reescrita"). A decisão
+de fazê-lo permanece um gate de negócio (ver §6).
 
 ## 12. Estratégia de testes
 
@@ -200,6 +223,5 @@ escritórios é uma extensão (namespace por tenant), não uma reescrita — mas
 - SemVer no `plugin.json` (`MAJOR.MINOR.PATCH`): `MAJOR` para mudança de
   comportamento do orquestrador ou remoção de skill; `MINOR` para skill nova;
   `PATCH` para ajuste de conteúdo/correção dentro de uma skill existente.
-- Todo release relevante é registrado no histórico de commits com mensagem
-  descritiva; um `CHANGELOG.md` formal só é introduzido quando o número de
-  releases justificar (evitar processo antes de haver necessidade real).
+- Todo release é registrado no `CHANGELOG.md` (formato Keep a Changelog) e
+  segue o processo de `RELEASE.md`.

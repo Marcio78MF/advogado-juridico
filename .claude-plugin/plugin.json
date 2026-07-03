@@ -2,6 +2,7 @@
   "name": "advogado-juridico",
   "description": "Suite completa para escritórios de advocacia: orquestrador inteligente que detecta automaticamente a demanda e ativa a skill jurídica correta — minutas, análise de risco, jurisprudência, prazos, audiências, LGPD, honorários e muito mais.",
   "version": "1.0.1",
+  "hooks": "./hooks/hooks.json",
   "author": {
     "name": "Misael Holanda",
     "email": "mhcontabil@gmail.com"

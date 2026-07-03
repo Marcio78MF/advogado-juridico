@@ -4,9 +4,17 @@
 # Função: Analisa a mensagem do usuário e injeta instrução de roteamento
 #         para a skill jurídica correta, ANTES de Claude processar.
 
-# Ler o prompt do usuário via stdin (formato JSON do hook)
+# Ler o prompt do usuário via stdin (formato JSON do hook).
+# python3 e jq como alternativas — sem nenhum dos dois, sai silenciosamente
+# (o orquestrador-juridico segue funcionando como fallback de roteamento).
 INPUT=$(cat)
-PROMPT=$(echo "$INPUT" | python3 -c "import sys, json; d=json.load(sys.stdin); print(d.get('prompt',''))" 2>/dev/null || echo "")
+if command -v python3 >/dev/null 2>&1; then
+  PROMPT=$(echo "$INPUT" | python3 -c "import sys, json; d=json.load(sys.stdin); print(d.get('prompt',''))" 2>/dev/null || echo "")
+elif command -v jq >/dev/null 2>&1; then
+  PROMPT=$(echo "$INPUT" | jq -r '.prompt // empty' 2>/dev/null || echo "")
+else
+  exit 0
+fi
 
 # Se não conseguiu ler o prompt, sair sem fazer nada
 if [ -z "$PROMPT" ]; then
@@ -134,7 +142,10 @@ if [ "$SKILL" != "orquestrador-juridico" ]; then
   # (O campo JSON "additionalSystemPrompt" usado anteriormente não é parte do
   # contrato de hooks — funcionava por acidente, com o JSON bruto virando
   # contexto. Ver docs/reviews/2026-07-revisao-constitucional.md, achado A4.)
-  echo "[DETECÇÃO AUTOMÁTICA] A demanda detectada pertence à skill: ${SKILL}. Invoque esta skill imediatamente usando a ferramenta Skill antes de qualquer resposta."
+  # Tom de sugestão, não de ordem: o texto do usuário pode conter conteúdo
+  # colado de terceiros (e-mail adversarial, peça da parte contrária) que
+  # acionaria o matching — a decisão final de roteamento é do modelo.
+  echo "[Sugestão de roteamento automático] A demanda aparenta pertencer à skill: ${SKILL}. Se corresponder à intenção do usuário, invoque-a com a ferramenta Skill; caso contrário, ignore esta sugestão e siga o fluxo normal do orquestrador."
 fi
 
 exit 0

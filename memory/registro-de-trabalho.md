@@ -1,5 +1,13 @@
 # Registro de Trabalho (MF Evolution Engine v0)
 
+> **⛔ SUSPENSO** (achado B10 do red team): enquanto este repositório for
+> público/instalável e a decisão de identidade (achado A2/B4 — separar
+> plugin público × MF-AOS privado) estiver pendente, **nada deve ser
+> registrado aqui**. Mesmo com granularidade mensal, tipo de demanda +
+> metadado de commit permite inferência adversarial cruzando com a
+> distribuição pública de ações (PJe). Este registro pertence ao Memory
+> Engine privado; o formato abaixo fica como especificação.
+
 Insumo do MF Evolution Engine (`MF-OPERATIONS.md` §9): registro **anônimo e
 agregado** dos tipos de demanda atendida, para detectar padrões no modo de
 trabalhar do escritório e propor skills/automações.
