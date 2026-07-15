@@ -81,5 +81,22 @@
   ],
   "total_investido_fii": 5015.34,
   "posicoes_acoes": [],
-  "dividendos_recebidos": []
+  "dividendos_recebidos": [
+    {
+      "ticker": "KNSC11",
+      "data_pagamento": "2026-07-13",
+      "valor_por_cota": 0.10,
+      "cotas_na_data": 130,
+      "valor_total": 13.00,
+      "observacao": "Dentro do run-rate esperado"
+    },
+    {
+      "ticker": "HGRE11",
+      "data_pagamento": "2026-07-14",
+      "valor_por_cota": 1.50,
+      "cotas_na_data": 6,
+      "valor_total": 9.00,
+      "observacao": "ALERTA: muito acima do run-rate (R$ 0,85-1,05). Não extrapolar — confirmar recorrência no relatório gerencial de julho antes de reforçar posição"
+    }
+  ]
 }
